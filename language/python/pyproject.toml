@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "praxo-core"
+version = "0.3.2"
+description = "Embeddable Python agent runtime with policy, human-in-the-loop approvals, checkpoints, and tool calling."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "AxisVela" }]
+keywords = ["agents", "agent-runtime", "agent-framework", "llm", "tool-calling", "tool-authorization", "policy-enforcement", "human-in-the-loop", "checkpoint", "embeddable"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/axisvela/praxo-core"
+Documentation = "https://axisvela.github.io/praxo-core/languages/python/"
+Source = "https://github.com/axisvela/praxo-core/tree/main/language/python"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["praxo*"]
