@@ -87,7 +87,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | Example | What it shows |
 | --- | --- |
 | [checkpoint](language/python/examples/checkpoint) | This example uses published PyPI `praxo-core==0.6.0` to keep checkpoint storage application-owned while using the SDK allowlist for payload encoding. |
-| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.3.2` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No r... |
+| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.7.0` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No r... |
 | [event-sink](language/python/examples/event-sink) | This example uses published PyPI `praxo-core==0.6.0` to observe agent lifecycle and tool events without coupling the agent to a logging or telemetry backend. |
 | [identity-policy](language/python/examples/identity-policy) | This example uses published PyPI `praxo-core==0.6.0` to bind a trusted principal to Core policy authorization. The application owns authentication and principal storage; Core on... |
 | [live-model](language/python/examples/live-model) |  |
