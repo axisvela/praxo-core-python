@@ -91,7 +91,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | [event-sink](language/python/examples/event-sink) | This example uses published PyPI `praxo-core==0.6.0` to observe agent lifecycle and tool events without coupling the agent to a logging or telemetry backend. |
 | [hitl](language/python/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/python/examples/identity-policy) | This example uses published PyPI `praxo-core==0.6.0` to bind a trusted principal to Core policy authorization. The application owns authentication and principal storage; Core on... |
-| [live-model](language/python/examples/live-model) |  |
+| [live-model](language/python/examples/live-model) | This example uses published PyPI `praxo-core==0.7.0` to connect the Python Core to an OpenAI-compatible endpoint and registers one low-risk `get_time` tool. |
 | [mcp](language/python/examples/mcp) | This example uses published PyPI `praxo-core==0.6.0` to connect to a minimal stdio MCP server, list its tools, register them in a Core registry, and call one tool. |
 | [provider-fallback](language/python/examples/provider-fallback) | This example uses published PyPI `praxo-core==0.6.0` to fall back to a second model when the primary model call fails. |
 | [retry](language/python/examples/retry) | This example uses published PyPI `praxo-core==0.6.0` to retry transient model failures without changing the agent loop. |
