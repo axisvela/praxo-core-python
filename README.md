@@ -9,9 +9,9 @@ PRAXO-CORE is a dependency-free Python framework for building tool-using AI agen
 | Package | `praxo-core` |
 | Registry | [PyPI](https://pypi.org/project/praxo-core/0.7.0/) |
 | Install | `pip install praxo-core==0.7.0` |
-| Source version | `0.7.0` |
+| Source version | `0.8.0` |
 | Published version | `0.7.0` |
-| Source tag | `python/v0.7.0` |
+| Source tag | `python/v0.8.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/python/ |
