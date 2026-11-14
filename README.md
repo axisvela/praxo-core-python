@@ -4,9 +4,9 @@ Dedicated repository for the Python implementation of PRAXO-CORE: an
 embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
-- Package: `praxo-core` (`0.6.0`)
+- Package: `praxo-core` (`0.7.0`)
 - Registry: PyPI
-- Install: `pip install praxo-core==0.6.0`
+- Install: `pip install praxo-core==0.7.0`
 - Documentation: https://axisvela.github.io/praxo-core/languages/python/
 - Examples: https://github.com/axisvela/praxo-core-python/tree/main/language/python/examples
 - Mirror repository: https://github.com/axisvela/praxo-core-python
