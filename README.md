@@ -96,7 +96,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | [provider-fallback](language/python/examples/provider-fallback) | This example uses published PyPI `praxo-core==0.8.1` to fall back to a second model when the primary model call fails. |
 | [retry](language/python/examples/retry) | This example uses published PyPI `praxo-core==0.8.1` to retry transient model failures without changing the agent loop. |
 | [service](language/python/examples/service) | This example embeds published PyPI `praxo-core==0.8.1` in a standard-library HTTP service. The application supplies a principal and tenant, restricts tools, and returns JSON. |
-| [service-auth](language/python/examples/service-auth) | This example embeds published PyPI `praxo-core==0.8.1` in a standard-library HTTP service with application-owned identity, tenant policy, and file-backed checkpoints. |
+| [service-auth](language/python/examples/service-auth) | This example embeds published PyPI `praxo-core==0.8.1` in a standard-library HTTP service with application-owned identity, tenant policy, an optional external policy decision se... |
 | [session-checkpoint](language/python/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses a teaching in-memory store; production storage and retention remain application-owned. |
 | [streaming](language/python/examples/streaming) | This example uses published PyPI `praxo-core==0.8.1` to consume deltas while the agent loop keeps running normally. |
 | [structured-output](language/python/examples/structured-output) | This example uses published PyPI `praxo-core==0.8.1` to turn free text into validated JSON with `StructuredOutput`. |
