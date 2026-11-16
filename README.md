@@ -86,6 +86,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 
 | Example | What it shows |
 | --- | --- |
+| [advanced-delegation](language/python/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child... |
 | [checkpoint](language/python/examples/checkpoint) | This example uses published PyPI `praxo-core==0.9.0` to keep checkpoint storage application-owned while using the SDK allowlist for payload encoding. |
 | [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.9.0` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No r... |
 | [event-sink](language/python/examples/event-sink) | This example uses published PyPI `praxo-core==0.9.0` to observe agent lifecycle and tool events without coupling the agent to a logging or telemetry backend. |
