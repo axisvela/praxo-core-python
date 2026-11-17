@@ -95,6 +95,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | [live-model](language/python/examples/live-model) | This example uses published PyPI `praxo-core==0.9.0` to connect the Python Core to an OpenAI-compatible endpoint and registers one low-risk `get_time` tool. |
 | [mcp](language/python/examples/mcp) | This example uses published PyPI `praxo-core==0.9.0` to connect to a minimal stdio MCP server, list its tools, register them in a Core registry, and call one tool. |
 | [provider-fallback](language/python/examples/provider-fallback) | This example uses published PyPI `praxo-core==0.9.0` to fall back to a second model when the primary model call fails. |
+| [representative-chain](language/python/examples/representative-chain) | This deterministic example exercises the same application seams as the Go representative chain without a live provider: |
 | [retry](language/python/examples/retry) | This example uses published PyPI `praxo-core==0.9.0` to retry transient model failures without changing the agent loop. |
 | [service](language/python/examples/service) | This example embeds published PyPI `praxo-core==0.9.0` in a standard-library HTTP service. The application supplies a principal and tenant, restricts tools, and returns JSON. |
 | [service-auth](language/python/examples/service-auth) | This example embeds published PyPI `praxo-core==0.9.0` in a standard-library HTTP service with application-owned identity, tenant policy, an optional external policy decision se... |
