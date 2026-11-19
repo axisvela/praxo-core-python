@@ -9,9 +9,9 @@ PRAXO-CORE is a dependency-free Python framework for building tool-using AI agen
 | Package | `praxo-core` |
 | Registry | [PyPI](https://pypi.org/project/praxo-core/0.9.1/) |
 | Install | `pip install praxo-core==0.9.1` |
-| Source version | `0.9.1` |
+| Source version | `0.10.0` |
 | Published version | `0.9.1` |
-| Source tag | `python/v0.9.1` |
+| Source tag | `python/v0.10.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/python/ |
@@ -72,9 +72,8 @@ See the [full Python README](language/python/README.md) for complete installatio
 | Capability | Status | Detail |
 | --- | --- | --- |
 | OpenAI-compatible model | native | `praxo.adapters.openaicompat` |
-| Anthropic model | native | `praxo.adapters.anthropic.AnthropicModel` |
-| Gemini model | native | `praxo.adapters.gemini.GeminiModel`; Gemini SSE streaming |
-| Process plugin host | native | `praxo.ProcessHost`; JSON-Lines stdio, token auth, health, timeout, cancel |
+| Anthropic model | native | `praxo.adapters.anthropic.AnthropicModel`; SSE streaming reassembly |
+| Gemini model | native | `praxo.adapters.gemini.GeminiModel`; SSE streaming |
 | MCP client | native | `praxo.adapters.mcp.MCPClient`; stdio, plus `mcp_http.StreamableHTTPTransport` for Streamable HTTP 2025-03-26 |
 | Harmovela sink | native | `praxo.adapters.harmovela.HarmovelaSink` |
 | OpenTelemetry sink | native (transport seam) | `praxo.adapters.otel.OtelSink`; caller supplies OTLP/HTTP transport |
