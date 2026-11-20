@@ -7,10 +7,10 @@ PRAXO-CORE is a dependency-free Python framework for building tool-using AI agen
 | Field | Value |
 | --- | --- |
 | Package | `praxo-core` |
-| Registry | [PyPI](https://pypi.org/project/praxo-core/0.9.1/) |
-| Install | `pip install praxo-core==0.9.1` |
+| Registry | [PyPI](https://pypi.org/project/praxo-core/0.10.0/) |
+| Install | `pip install praxo-core==0.10.0` |
 | Source version | `0.10.0` |
-| Published version | `0.9.1` |
+| Published version | `0.10.0` |
 | Source tag | `python/v0.10.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
@@ -30,7 +30,7 @@ PRAXO-CORE is a dependency-free Python framework for building tool-using AI agen
 Install the published package:
 
 ```bash
-pip install praxo-core==0.9.1
+pip install praxo-core==0.10.0
 ```
 
 ```python
@@ -88,7 +88,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | --- | --- |
 | [advanced-delegation](language/python/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child... |
 | [checkpoint](language/python/examples/checkpoint) | This example uses published PyPI `praxo-core==0.9.0` to keep checkpoint storage application-owned while using the SDK allowlist for payload encoding. |
-| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.9.1` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No r... |
+| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.10.0` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No... |
 | [event-sink](language/python/examples/event-sink) | This example uses published PyPI `praxo-core==0.9.0` to observe agent lifecycle and tool events without coupling the agent to a logging or telemetry backend. |
 | [hitl](language/python/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/python/examples/identity-policy) | This example uses published PyPI `praxo-core==0.9.0` to bind a trusted principal to Core policy authorization. The application owns authentication and principal storage; Core on... |
