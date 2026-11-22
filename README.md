@@ -102,6 +102,7 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | [session-checkpoint](language/python/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses a teaching in-memory store; production storage and retention remain application-owned. |
 | [streaming](language/python/examples/streaming) | This example uses published PyPI `praxo-core==0.9.0` to consume deltas while the agent loop keeps running normally. |
 | [structured-output](language/python/examples/structured-output) | This example uses published PyPI `praxo-core==0.9.0` to turn free text into validated JSON with `StructuredOutput`. |
+| [structured-output-app](language/python/examples/structured-output-app) | This example turns a directory of text files into validated JSON lines with `StructuredOutput`. It is an application-shaped path: input files, a validated result file, a separat... |
 
 ## Verify
 
