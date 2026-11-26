@@ -104,15 +104,9 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 | [structured-output](language/python/examples/structured-output) | This example uses published PyPI `praxo-core==0.9.0` to turn free text into validated JSON with `StructuredOutput`. |
 | [structured-output-app](language/python/examples/structured-output-app) | This example turns a directory of text files into validated JSON lines with `StructuredOutput`. It is an application-shaped path: input files, a validated result file, a separat... |
 
-## Tutorials and Candidate Scenarios
-
-Start with the [Tutorial Plan](https://axisvela.github.io/praxo-core/getting-started/tutorial-plan/) for delivery standards and the [reference application portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio), review the [100 candidate agent scenarios](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), and browse the [unified Tutorial Catalog](https://axisvela.github.io/praxo-core/getting-started/tutorial-catalog/).
-
-Chinese: [教程计划](https://axisvela.github.io/praxo-core/zh-CN/getting-started/tutorial-plan/), [候选场景](https://axisvela.github.io/praxo-core/zh-CN/getting-started/agent-scenarios/), [教程目录](https://axisvela.github.io/praxo-core/zh-CN/getting-started/tutorial-catalog/).
-
 ## Scenario Tutorials
 
-Scenario-oriented tutorials live under `language/python/Tutorial`.
+Scenario-oriented tutorials live under `language/python/Tutorial`. Planning context: [Tutorial Plan](https://axisvela.github.io/praxo-core/getting-started/tutorial-plan/), [100 candidate agent scenarios](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), and [Tutorial Catalog](https://axisvela.github.io/praxo-core/getting-started/tutorial-catalog/).
 
 | Path | What it shows |
 | --- | --- |
@@ -143,6 +137,8 @@ Scenario-oriented tutorials live under `language/python/Tutorial`.
 | [threat-hunting](language/python/Tutorial/threat-hunting) | Searches fixed logs and drafts a cited synthetic TTP timeline. No external intelligence or APT detection guarantee. |
 | [trial-screening](language/python/Tutorial/trial-screening) | A bounded first slice of [HC-03](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not patient recruitment or eligibility adjudication. It evaluates fixed... |
 | [virtual-pi](language/python/Tutorial/virtual-pi) | A bounded first slice of [OG-07](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not an autonomous research team. It coordinates three fixed literature/... |
+
+No accepted end-to-end reference application is recorded for this language yet. Candidate goals are tracked in the [Reference Application Portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio).
 
 ## Verify
 
