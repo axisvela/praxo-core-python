@@ -138,6 +138,8 @@ Scenario-oriented tutorials live under `language/python/Tutorial`. Planning cont
 | [trial-screening](language/python/Tutorial/trial-screening) | A bounded first slice of [HC-03](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not patient recruitment or eligibility adjudication. It evaluates fixed... |
 | [virtual-pi](language/python/Tutorial/virtual-pi) | A bounded first slice of [OG-07](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not an autonomous research team. It coordinates three fixed literature/... |
 
+## Reference Applications
+
 No accepted end-to-end reference application is recorded for this language yet. Candidate goals are tracked in the [Reference Application Portfolio](https://axisvela.github.io/praxo-core/project/roadmap/#reference-application-portfolio).
 
 ## Verify
