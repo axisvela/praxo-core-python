@@ -1,6 +1,6 @@
 # PRAXO-CORE for Python
 
-PRAXO-CORE is a dependency-free Python framework for building tool-using AI agents. It provides the agent runtime, not a model or hosted service, so you keep control of your models, tools, storage, and sandboxing.
+PRAXO-CORE (also written praxocore) is an embeddable, MIT-licensed agent framework. PRAXO-CORE is a dependency-free Python framework for building tool-using AI agents. It provides the agent runtime, not a model or hosted service, so you keep control of your models, tools, storage, and sandboxing.
 
 ## At a glance
 
@@ -87,23 +87,23 @@ Runnable examples live under [`language/python/examples`](language/python/exampl
 
 | Example | What it shows |
 | --- | --- |
-| [advanced-delegation](language/python/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child... |
+| [advanced-delegation](language/python/examples/advanced-delegation) | This example shows an application-level parent/child agent pattern. The parent agent may call a `delegate` tool but not the child's `record` tool. The delegate tool runs a child agent with its own tool scope, policy, and fixture model. |
 | [checkpoint](language/python/examples/checkpoint) | This example uses published PyPI `praxo-core==0.9.0` to keep checkpoint storage application-owned while using the SDK allowlist for payload encoding. |
-| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.11.2` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No... |
+| [consumer](language/python/examples/consumer) | This starter installs `praxo-core==0.11.2` from PyPI in a dedicated virtual environment. It does not import the repository's Python implementation. Use Python 3.11 or newer. No runtime dependency other than PRAXO-CORE is needed. |
 | [event-sink](language/python/examples/event-sink) | This example uses published PyPI `praxo-core==0.9.0` to observe agent lifecycle and tool events without coupling the agent to a logging or telemetry backend. |
 | [hitl](language/python/examples/hitl) | This example demonstrates a write tool that requires human approval: |
-| [identity-policy](language/python/examples/identity-policy) | This example uses published PyPI `praxo-core==0.9.0` to bind a trusted principal to Core policy authorization. The application owns authentication and principal storage; Core on... |
+| [identity-policy](language/python/examples/identity-policy) | This example uses published PyPI `praxo-core==0.9.0` to bind a trusted principal to Core policy authorization. The application owns authentication and principal storage; Core only calls the policy hook. |
 | [live-model](language/python/examples/live-model) | This example uses published PyPI `praxo-core==0.9.0` to connect the Python Core to an OpenAI-compatible endpoint and registers one low-risk `get_time` tool. |
 | [mcp](language/python/examples/mcp) | This example uses published PyPI `praxo-core==0.9.0` to connect to a minimal stdio MCP server, list its tools, register them in a Core registry, and call one tool. |
 | [provider-fallback](language/python/examples/provider-fallback) | This example uses published PyPI `praxo-core==0.9.0` to fall back to a second model when the primary model call fails. |
 | [representative-chain](language/python/examples/representative-chain) | This deterministic example exercises the same application seams as the Go representative chain without a live provider: |
 | [retry](language/python/examples/retry) | This example uses published PyPI `praxo-core==0.9.0` to retry transient model failures without changing the agent loop. |
 | [service](language/python/examples/service) | This example embeds published PyPI `praxo-core==0.9.0` in a standard-library HTTP service. The application supplies a principal and tenant, restricts tools, and returns JSON. |
-| [service-auth](language/python/examples/service-auth) | This example embeds published PyPI `praxo-core==0.9.0` in a standard-library HTTP service with application-owned identity, tenant policy, an optional external policy decision se... |
+| [service-auth](language/python/examples/service-auth) | This example embeds published PyPI `praxo-core==0.9.0` in a standard-library HTTP service with application-owned identity, tenant policy, an optional external policy decision service, and file-backed checkpoints. |
 | [session-checkpoint](language/python/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses a teaching in-memory store; production storage and retention remain application-owned. |
 | [streaming](language/python/examples/streaming) | This example uses published PyPI `praxo-core==0.9.0` to consume deltas while the agent loop keeps running normally. |
 | [structured-output](language/python/examples/structured-output) | This example uses published PyPI `praxo-core==0.9.0` to turn free text into validated JSON with `StructuredOutput`. |
-| [structured-output-app](language/python/examples/structured-output-app) | This example turns a directory of text files into validated JSON lines with `StructuredOutput`. It is an application-shaped path: input files, a validated result file, a separat... |
+| [structured-output-app](language/python/examples/structured-output-app) | This example turns a directory of text files into validated JSON lines with `StructuredOutput`. It is an application-shaped path: input files, a validated result file, a separate failure file, and a resume mode. |
 
 ## Scenario Tutorials
 
@@ -119,16 +119,16 @@ Scenario-oriented tutorials live under `language/python/Tutorial`. Planning cont
 | [clinical-guidelines](language/python/Tutorial/clinical-guidelines) | A bounded first slice of [HC-01](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not diagnosis or treatment advice. It retrieves fixed synthetic guideline excerpts, cites the top match, drafts a review-only summary, and abstains when no evidence matches. No patient records or live model are used. |
 | [credit-diligence](language/python/Tutorial/credit-diligence) | A bounded first slice of [FC-03](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not a credit decision or fraud adjudication system. It computes fixed ratios for one synthetic applicant and drafts a review-only memo. No bureau call, decision or live model is used. |
 | [dubbing-plan](language/python/Tutorial/dubbing-plan) | A bounded first slice of [MD-04](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not a dubbing or voice-cloning product. It reads fixed licensed media segments and drafts a review-only caption and timing plan. No audio synthesis, impersonation, unconsented voice cloning or verified lip-sync. |
-| [education-tutoring](language/python/Tutorial/education-tutoring) | A native Python Core tutorial for a guided study plan. An application-owned `LessonRetriever` implements the Core `Retriever` protocol and returns typed `Document`s with metadat... |
-| [insurance-claims](language/python/Tutorial/insurance-claims) | A native Python Core tutorial for review-only claim triage. Two fixed tools read a synthetic claim file and draft a decision; the deterministic model packages the tool-computed... |
-| [legal-compliance](language/python/Tutorial/legal-compliance) | A native Python Core tutorial for a compliance memo with a human-review gate. One tool searches fixed policy fixtures; a second tool publishes the memo only after the applicatio... |
+| [education-tutoring](language/python/Tutorial/education-tutoring) | A native Python Core tutorial for a guided study plan. An application-owned `LessonRetriever` implements the Core `Retriever` protocol and returns typed `Document`s with metadata and scores; the agent cites the top lesson and drafts a review-only study plan. This tutorial does not read arbitrary files, create assignments, identify a student or call a live model. |
+| [insurance-claims](language/python/Tutorial/insurance-claims) | A native Python Core tutorial for review-only claim triage. Two fixed tools read a synthetic claim file and draft a decision; the deterministic model packages the tool-computed risk and payout into a schema-validated report. `StructuredOutput` rejects a malformed report before the application sees it. This tutorial does not execute a payment, adjudicate coverage, read arbitrary files, call a live model or mutate a policy. |
+| [legal-compliance](language/python/Tutorial/legal-compliance) | A native Python Core tutorial for a compliance memo with a human-review gate. One tool searches fixed policy fixtures; a second tool publishes the memo only after the application approves the interrupt. The deterministic model packages the cited evidence. This tutorial does not read arbitrary files, call a real case system, publish to a real document store or call a live model. |
 | [literature-review](language/python/Tutorial/literature-review) | Retrieves two fixed abstracts and drafts unverified hypotheses with citations. No fabricated papers or verified conclusions. |
 | [litigation-timeline](language/python/Tutorial/litigation-timeline) | Builds a cited timeline from fixed documents and drafts a review-only examination outline. No legal advice or admissibility claim. |
 | [marketing-segments](language/python/Tutorial/marketing-segments) | Computes fixed consent-aware segments and drafts review-only content. No publication or tracking. |
 | [molecule-screen](language/python/Tutorial/molecule-screen) | A bounded first slice of [SC-02](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not drug discovery. It ranks fixed synthetic molecular descriptors under stated constraints and drafts a review-only assessment. No efficacy, toxicity, synthesis or clinical claim. |
 | [negotiation-interpretation](language/python/Tutorial/negotiation-interpretation) | Compares fixed transcript terms, flags uncertainty and drafts review-only notes. No mind reading, micro-expression inference or live interpretation guarantee. |
-| [office-qa](language/python/Tutorial/office-qa) | A native Python Core tutorial for office-policy Q&A with citations. The Agent has one fixed tool, `search_documents`, which searches three synthetic policy documents. The determ... |
-| [order-review](language/python/Tutorial/order-review) | First local integration slice, not a completed HR or Web tutorial. The native Python Core chooses a scoped `review_order` tool. The tool reads a synthetic order through HTTP and... |
+| [office-qa](language/python/Tutorial/office-qa) | A native Python Core tutorial for office-policy Q&A with citations. The Agent has one fixed tool, `search_documents`, which searches three synthetic policy documents. The deterministic model packages the top search result and its document ID into an answer. It does not read arbitrary files, call a connector, update the documents or send email. |
+| [order-review](language/python/Tutorial/order-review) | First local integration slice, not a completed HR or Web tutorial. The native Python Core chooses a scoped `review_order` tool. The tool reads a synthetic order through HTTP and creates a deterministic resolution draft. It never changes the order or issues a refund. Recommendations are application rules; model text is not proof that the draft exists. |
 | [patent-fto](language/python/Tutorial/patent-fto) | A bounded first slice of [LJ-02](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not a freedom-to-operate or patentability opinion. It compares fixed synthetic claims and drafts review-only questions for counsel. No live patent search, legal advice or non-infringement conclusion. |
 | [pentest-lab-review](language/python/Tutorial/pentest-lab-review) | Inventories one fixed loopback lab and drafts a review-only report. No external scanning or exploit chain. |
 | [phishing-awareness](language/python/Tutorial/phishing-awareness) | A bounded first slice of [CY-04](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not a mail-security product. It analyzes one fixed synthetic email and drafts a review-only awareness exercise. No deceptive sends, live inbox or infrastructure attack. |
@@ -146,6 +146,11 @@ No accepted end-to-end reference application is recorded for this language yet. 
 ## Verify
 
 This mirror contains the language source and the shared `spec/` vectors, so the implementation can be built and tested here. See [`language/python/README.md`](language/python/README.md) for the exact commands. The monorepo CI runs conformance, API snapshot, and native tests for this implementation.
+
+## Boundaries
+
+Reference application source is not end-to-end portfolio acceptance; follow each README's scope and evidence.
+PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 ## Community
 
@@ -176,6 +181,5 @@ This mirror contains the language source and the shared `spec/` vectors, so the 
 
 This repository is a discovery mirror of the canonical Python source. The monorepo remains the source of truth and the release workflow source. The mirror's `main` branch tracks current source, not a release snapshot. Source tags refer to the canonical monorepo and are not necessarily present in this mirror; syncing the branch does not publish mirror tags or registry packages.
 
-PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 MIT licensed.
